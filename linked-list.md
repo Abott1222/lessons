@@ -131,7 +131,7 @@ let head = {
 
 This code more accurately represents a typical linked list because programs usually don't have references to every node in the list.
 
-Using only the `head` reference, how would you do insert `'Z'` into the beginning of the list? Well, because nodes are stored non-sequentially in memory, you'd start by creating a new node that contains `'Z'` in its `data` attribute and a reference to the current `head` in its `next` attribute.
+Using only the `head` reference, how would you do insert `'Z'` into the beginning of the list? Well, because nodes are objects stored non-sequentially in memory, you'd start by creating a new node that contains `'Z'` in its `data` attribute and a reference to the current `head` in its `next` attribute.
 
 ```text
                                 head
