@@ -1,6 +1,6 @@
 # Linked Lists
 
-A [linked list](https://en.wikipedia.org/wiki/Linked_list) is a data structure that keeps an ordered collection of data. A linked list is similar to an array, but differs in its approach to storing data. In this lesson, you'll see how this difference in approach produces unique advantages as well as disadvantages.
+A [linked list](https://en.wikipedia.org/wiki/Linked_list) is a data structure that manages an ordered collection of data. A linked list is similar to an array, but differs in its approach to storing data. In this lesson, you'll see how this difference in approach produces unique advantages as well as disadvantages.
 
 ## Objectives
 
@@ -13,7 +13,7 @@ By the end of this lesson, you'll be able to:
 
 ## What's a linked list?
 
-As previously mentioned, a **linked list** is a data structure that keeps an ordered collection of data. It consists of a linear collection of elements, called nodes, each containing data and a reference to the next node in the collection, if one exists.
+As previously mentioned, a **linked list** is a data structure that manages an ordered collection of data. It consists of a linear collection of elements, called nodes, each containing data and a reference to the next node in the collection, if one exists.
 
 The following is a diagram of a linked list that consists of three nodes.
 
@@ -50,6 +50,8 @@ const third = { data: 'C', next: null };
 const second = { data: 'B', next: third };
 const first = { data: 'A', next: second };
 ```
+
+Because both linked lists and arrays maintain an ordered collection of data, a linked list can be used anywhere you would use an array. However, because of it's node structure, a linked list has different performance characteristics, which we'll study in a moment.
 
 In a dynamically typed language, like JavaScript, a node's `data` attribute can contain any data type, such as a boolean, a number, a string, an object, an array, or even `null`. However, a node's `next` attribute can either contain `null` or a reference to the next node in the collection.
 
@@ -97,7 +99,7 @@ Finally, translate your diagram into JavaScript code.
 
 ## Why are linked lists important?
 
-Linked lists are important because they allow nodes to be efficiently inserted and deleted at any position in the collection, so long as you have a suitable reference.
+As previously mentioned, a linked list can be used anywhere you would use an array, though with different performance characteristics. Specifically, a linked list allow nodes to be efficiently inserted and deleted at any position in the collection, so long as you have a suitable reference.
 
 Let's revisit the previous linked list example. This time, imagine that a program only has access to the linked list's **head**, or first node. The following is an updated diagram of the original linked list example.
 
