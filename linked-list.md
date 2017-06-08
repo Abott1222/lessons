@@ -9,7 +9,7 @@ By the end of this lesson, you'll be able to:
 - Explain what a linked list is.
 - Explain why linked lists are important.
 - Create and use a LinkedList class.
-- Explain what the time and space complexities are for the LinkedList class.
+- Explain what the time and space complexities are for a linked list.
 
 ## What's a linked list?
 
@@ -514,7 +514,7 @@ Turn to a neighbor and peer review their implementation of the `LinkedList` clas
 
 As a bonus, see if you can implement a `shift` method that removes data from the beginning of a linked list. What will your `shift` method return?
 
-## What are the time and space complexities for the LinkedList class?
+## What are the time and space complexities for a linked list?
 
 Before using the above `LinkedList` class to store an ordered collection of data in a real program, it's important to understand the performance characteristics of its methods as measured in both time and space. Let's start by analyzing its `constructor` method.
 
