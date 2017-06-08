@@ -117,7 +117,7 @@ Finally, translate your diagram into JavaScript code.
 
 ## Why are linked lists important?
 
-As previously mentioned, a linked list can be used anywhere you would use an array, though with different performance characteristics. Specifically, a linked list allow nodes to be efficiently inserted and deleted at any position in the collection, so long as you have a suitable reference.
+As previously mentioned, a linked list can be used anywhere you would use an array, though with different performance characteristics. Specifically, a linked list allows nodes to be efficiently inserted and deleted at any position in the collection, so long as you have a suitable reference.
 
 Let's revisit the previous linked list example. This time, imagine that a program only has access to the linked list's **head**, or first node. The following is an updated diagram of the original linked list example.
 
