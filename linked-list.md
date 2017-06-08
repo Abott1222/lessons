@@ -551,7 +551,7 @@ class LinkedList {
 }
 ```
 
-As you can see, initializing an empty linked list always takes two assignment operations. Since the amount of time and space required is always the same, the `constructor` method's time and space complexities are both constant or `O(1)`.
+As you can see, initializing an empty linked list always takes two assignment operations. Since the number of operations and amount of memory used is always the same, the `constructor` method's time and space complexities are both constant or `O(1)`.
 
 Next, let's analyze its `toString` method.
 
