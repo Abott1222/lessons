@@ -51,9 +51,27 @@ const second = { data: 'B', next: third };
 const first = { data: 'A', next: second };
 ```
 
-Because both linked lists and arrays maintain an ordered collection of data, a linked list can be used anywhere you would use an array. However, because of it's node structure, a linked list has different performance characteristics, which we'll study in a moment.
-
 In a dynamically typed language, like JavaScript, a node's `data` attribute can contain any data type, such as a boolean, a number, a string, an object, an array, or even `null`. However, a node's `next` attribute can either contain `null` or a reference to the next node in the collection.
+
+Because both linked lists and arrays maintain an ordered collection of data, a linked list can be used anywhere you would use an array. But while an array's elements are stored sequentially in memory, a linked list's nodes are stored **non-sequentially** in memory. Here's a diagram that illustrates the memory structure differences between a linked list and an array.
+
+```text
+ Linked list
+┌─ data ─┬─ next ─┐     ┌─ data ─┬─ next ─┐     ┌─ data ─┬─ next ─┐
+│        │        │     │        │        │     │        │        │
+│  'A'   │    ────┼────▶│  'B'   │    ────┼────▶│  'C'   │  null  │
+│        │        │     │        │        │     │        │        │
+└────────┴────────┘     └────────┴────────┘     └────────┴────────┘
+
+ Array
+┌── 0 ───┬── 1 ───┬── 2 ───┐
+│        │        │        │
+│  'A'   │  'B'   │  'C'   │
+│        │        │        │
+└────────┴────────┴────────┘
+```
+
+Because of its node structure, a linked list has different performance characteristics than an array, which we'll study in a moment.
 
 It's helpful to think of a linked list as a scavenger hunt. You're given the first clue, which leads you to the next clue, which leads you to the next clue, and so on until you reach the end. The following code snippet describes the process of finding the end of a linked list using a recursive function.
 
@@ -239,7 +257,7 @@ Here's a chart that describes the difference between common Big-O complexities s
 
 Now, you might be wondering why linked lists aren't used all the time, especially if they're so efficient at inserting data at the beginning of an ordered collection. Well, what if a program needed to access a specific node by its position and all it had was a reference to the `head` node?
 
-For example, imagine a program needs to read the `data` attribute of the very last node. Just like in a scavenger hunt, the program would have to traverse the list, stopping at every node until it found the last node.
+For example, imagine a program needs to read the `data` attribute of the very last node. Because a linked list's nodes are stored non-sequentially in memory, the program must traverse the list like a scavenger hunt, stopping at every node until the last one is found.
 
 Here's a diagram that describes traversing a linked list in order to read the `data` attribute of the last node.
 
@@ -292,10 +310,12 @@ console.log(data);  // displays C to the console
 
 As you can see, reading the `data` attribute of the very last node depends on the number of nodes that are present in the linked list. In other words, this operation takes linear time or `O(n)` where `n` is the number of nodes in the list.
 
-On the other hand, reading the last element of an array is as simple as accessing it by its index. Here's a diagram that describes accessing the same array by an index in order to read the last element.
+On the other hand, reading the last element of an array is as simple as accessing it by its index. Because an array's elements are stored sequentially in memory, the program just performs one arithmetic operation to directly access the last element.
+
+Here's a diagram that describes accessing the same array by an index in order to read the last element.
 
 ```text
-                               │
+    ───── address + index ─────┐
                                ▼
 ┌── 0 ───┬── 1 ───┬── 2 ───┬── 3 ───┐
 │        │        │        │        │
