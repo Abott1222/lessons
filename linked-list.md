@@ -331,7 +331,7 @@ Here's a diagram that describes accessing the same array by an index in order to
                               'C'
 ```
 
-As you can see, the number of operations to read the very last element doesn't depend on the number of nodes that are present in the array. In other words, reading the data in the last element of an array takes linear time or `O(1)`.
+As you can see, it only takes one arithmetic operation to read the very last element of an array. Because the number of operations to read any element doesn't depend on the number of elements that are present in the array. In other words, reading the data in the last element of an array takes constant time or `O(1)`.
 
 Now, you might be wondering in what situations would a program need to insert, and delete, data at the beginning of an ordered collection very quickly while still traversing through the list fairly quickly. Here are a few examples from the material world as well as the immaterial world of software.
 
