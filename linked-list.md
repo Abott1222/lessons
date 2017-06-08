@@ -279,6 +279,8 @@ Here's a diagram that describes traversing a linked list in order to read the `d
                                                                            'C'
 ```
 
+**QUESTION:** How would a program know it found the last node of a linked list?
+
 The following code snippet describes traversing a linked list in order to read the `data` attribute of the last node using a recursive function.
 
 ```javascript
