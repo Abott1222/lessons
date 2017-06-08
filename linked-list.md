@@ -13,7 +13,7 @@ By the end of this lesson, you'll be able to:
 
 ## What's a linked list?
 
-As previously mentioned, a **linked list** is a data structure that keeps an ordered collection of data. It consists of a linear collection of elements, called nodes, each containing data and a possible reference to the next node in the collection.
+As previously mentioned, a **linked list** is a data structure that keeps an ordered collection of data. It consists of a linear collection of elements, called nodes, each containing data and a reference to the next node in the collection, if one exists.
 
 The following is a diagram of a linked list that consists of three nodes.
 
@@ -31,7 +31,7 @@ As you can see, the above linked list consists of the following nodes.
 2. The 2nd node contains `'B'` in its `data` attribute and a reference to the 3rd node in its `next` attribute.
 3. The 3rd node contains `'C'` in its `data` attribute and `null` in its `next` attribute because it doesn't reference another node.
 
-In JavaScript, this linked list could be described with the following code.
+In JavaScript, this linked list could be represented with the following code.
 
 ```javascript
 const first = { data: 'A' };
@@ -87,7 +87,7 @@ A linked list that consists of nodes with only one reference is called a **singl
 
 ### Exercise
 
-Turn to a neighbor and, in your own words, explain what a linked list is. Then, draw a diagram of a linked list that contains the following data.
+Turn to a neighbor and, in your own words, explain what a linked list is. Then, draw a diagram of a linked list that contains the following ordered data.
 
 ```text
 Joe, Craig, Eli, Halston, Joe, DJ
@@ -112,7 +112,7 @@ Let's revisit the previous linked list example. This time, imagine that a progra
 └────────┴────────┘     └────────┴────────┘     └────────┴────────┘
 ```
 
-In JavaScript, this linked list could be described with the following code.
+In JavaScript, this linked list could be represented with the following code.
 
 ```javascript
 let head = {
@@ -150,7 +150,7 @@ Then, you'd update `head` to reference the new node.
          ▼
 ┌─ data ─┬─ next ─┐     ┌─ data ─┬─ next ─┐     ┌─ data ─┬─ next ─┐     ┌─ data ─┬─ next ─┐
 │        │        │     │        │        │     │        │        │     │        │        │
-│  'A'   │    ────┼────▶│  'B'   │    ────┼────▶│  'C'   │    ────┼────▶│  'D'   │  null  │
+│  'Z'   │    ────┼────▶│  'A'   │    ────┼────▶│  'B'   │    ────┼────▶│  'C'   │  null  │
 │        │        │     │        │        │     │        │        │     │        │        │
 └────────┴────────┘     └────────┴────────┘     └────────┴────────┘     └────────┴────────┘
 ```
@@ -335,6 +335,8 @@ Now that you know what a linked list is and why it's important, let's create a `
 | `unshift`     | Insert data at the beginning of a linked list           |
 | `get`         | Read the data from a specific position in a linked list |
 
+**NOTE:** The `unshift` method has a funny name because it's the opposite of shifting data off the front of an ordered collection or a binary number.
+
 To get started, open your text editor, create a file called `linkedList.js` and type the following code.
 
 ```javascript
@@ -506,11 +508,11 @@ index -1: undefined
 
 ### Exercise
 
-Turn to a neighbor and review their implementation of the `LinkedList` class with your own. What's similar? What's different?
+Turn to a neighbor and peer review their implementation of the `LinkedList` class. What's similar about their work? What's different?
 
 As a bonus, see if you can implement a `shift` method that removes data from the beginning of a linked list. What will your `shift` method return?
 
-## What are the time and space complexities are for the LinkedList class?
+## What are the time and space complexities for the LinkedList class?
 
 Before using the above `LinkedList` class to store an ordered collection of data in a real program, it's important to understand the performance characteristics of its methods as measured in both time and space. Let's start by analyzing its `constructor` method.
 
