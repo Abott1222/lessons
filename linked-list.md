@@ -249,7 +249,7 @@ Then, it inserts `'Z'` into the first position of the array.
 └────────┴────────┴────────┴────────┘
 ```
 
-As you can see, all the existing data must be copied to a new position before the insertion can happen. Because of this, the number of operations to insert data into the beginning of an array depends on the number of elements that are present in the array. In other words, inserting an element at the beginning of an array takes linear time or `O(n)` where `n` is the number of elements in the array.
+As you can see, all the existing data must be copied to a new position before the insertion can happen. Because of this, the number of operations to insert data into the beginning of an array grows linearly depending on the number of elements that are present in the array. In other words, inserting an element at the beginning of an array takes linear time or `O(n)` where `n` is the number of elements in the array.
 
 Here's a chart that describes the difference between common Big-O complexities such as `O(1)` and `O(n)`.
 
@@ -310,7 +310,7 @@ const data = readLastNode(head);
 console.log(data);  // displays C to the console
 ```
 
-As you can see, the number of operations to read the `data` attribute of the very last node depends on the number of nodes that are present in the linked list. In other words, reading the data in the last node of a linked list takes linear time or `O(n)` where `n` is the number of nodes in the list.
+As you can see, the number of operations to read the `data` attribute of the very last node grows linearly depending on the number of nodes that are present in the linked list. In other words, reading the data in the last node of a linked list takes linear time or `O(n)` where `n` is the number of nodes in the list.
 
 On the other hand, reading the last element of an array is as simple as accessing it by its index. Because an array's elements are stored sequentially in memory, the program just performs one arithmetic operation to directly access the last element.
 
