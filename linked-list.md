@@ -361,7 +361,7 @@ Now that you know what a linked list is and why it's important, let's create a `
 | `unshift`     | Insert data at the beginning of a linked list           |
 | `get`         | Read the data from a specific position in a linked list |
 
-**NOTE:** The `unshift` method has a funny name because it's the opposite of shifting data off the front of an ordered collection or a binary number.
+**NOTE:** The `unshift` method has a funny name because it's the opposite of shifting data off the front of an things like an ordered collection or a binary number.
 
 To get started, open your text editor, create a file called `linkedList.js` and type the following code.
 
