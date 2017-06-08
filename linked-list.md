@@ -131,7 +131,7 @@ let head = {
 
 This code more accurately represents a typical linked list because programs usually don't have references to every node in the list.
 
-Using only the `head` reference, how would you do insert `'Z'` into the beginning of the list? Well, first, you'd create a new node that contains `'Z'` in its `data` attribute and a reference to the current `head` in its `next` attribute.
+Using only the `head` reference, how would you do insert `'Z'` into the beginning of the list? Well, because nodes are stored non-sequentially in memory, you'd start by creating a new node that contains `'Z'` in its `data` attribute and a reference to the current `head` in its `next` attribute.
 
 ```text
                                 head
@@ -197,7 +197,7 @@ When the above code executes, it produces the following output.
 
 As you can see, inserting data into the beginning of a linked list takes the same amount of time regardless of how many nodes are present in the list. This means inserting data into the beginning of a linked list with only a reference to the list's `head` takes constant time or `O(1)`.
 
-If, on the other hand, a program were to insert `'Z'` into the beginning of a JavaScript array, the process would be a little more involved. As we've previously studied, the built-in JavaScript array is in fact a dynamic array. Within a dynamic array lives a static array, which often has unused elements at the end.
+If, on the other hand, a program were to insert `'Z'` into the beginning of a JavaScript array, the process would be a little more involved. As we've previously studied, the built-in JavaScript array is in fact a dynamic array. Within a dynamic array lives a static array, which stores elements sequentially in memory and often has unused elements at the end.
 
 Here's a diagram that shows a dynamic array that's similar to the previous linked list example and has one unused element at the end.
 
