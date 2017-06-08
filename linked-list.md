@@ -213,7 +213,7 @@ When the above code executes, it produces the following output.
 }
 ```
 
-As you can see, inserting data into the beginning of a linked list takes the same amount of time regardless of how many nodes are present in the list. This means inserting data into the beginning of a linked list with only a reference to the list's `head` takes constant time or `O(1)`.
+As you can see, inserting data into the beginning of a linked list takes the same number of operations regardless of how many nodes are present in the list. This means inserting data into the beginning of a linked list with only a reference to the list's `head` takes constant time or `O(1)`.
 
 If, on the other hand, a program were to insert `'Z'` into the beginning of a JavaScript array, the process would be a little more involved. As we've previously studied, the built-in JavaScript array is in fact a dynamic array. Within a dynamic array lives a static array, which stores elements sequentially in memory and often has unused elements at the end.
 
@@ -230,6 +230,8 @@ Here's a diagram that shows a dynamic array that's similar to the previous linke
 To insert `'Z'` into the beginning of this array, the JavaScript interpreter first copies the data, one at a time, from its old position to a new position, making space at the front of the array.
 
 ```text
+       ┌───┐    ┌───┐    ┌───┐
+       │   ▼    │   ▼    │   ▼
 ┌── 0 ───┬── 1 ───┬── 2 ───┬── 3 ───┐
 │        │        │        │        │
 │        │  'A'   │  'B'   │  'C'   │
@@ -247,7 +249,7 @@ Then, it inserts `'Z'` into the first position of the array.
 └────────┴────────┴────────┴────────┘
 ```
 
-As you can see, inserting data into the beginning of an array means all the existing data must be copied to a new position before the insertion can happen. Because this operation depends on the number of elements that are present in the array, inserting an element at the beginning takes linear time or `O(n)` where `n` is the number of elements in the array.
+As you can see, all the existing data must be copied to a new position before the insertion can happen. Because of this, the number of operations to insert data into the beginning of an array depends on the number of elements that are present in the array. In other words, inserting an element at the beginning of an array takes linear time or `O(n)` where `n` is the number of elements in the array.
 
 Here's a chart that describes the difference between common Big-O complexities such as `O(1)` and `O(n)`.
 
@@ -308,7 +310,7 @@ const data = readLastNode(head);
 console.log(data);  // displays C to the console
 ```
 
-As you can see, reading the `data` attribute of the very last node depends on the number of nodes that are present in the linked list. In other words, this operation takes linear time or `O(n)` where `n` is the number of nodes in the list.
+As you can see, the number of operations to read the `data` attribute of the very last node depends on the number of nodes that are present in the linked list. In other words, reading the data in the last node of a linked list takes linear time or `O(n)` where `n` is the number of nodes in the list.
 
 On the other hand, reading the last element of an array is as simple as accessing it by its index. Because an array's elements are stored sequentially in memory, the program just performs one arithmetic operation to directly access the last element.
 
@@ -327,7 +329,7 @@ Here's a diagram that describes accessing the same array by an index in order to
                               'C'
 ```
 
-As you can see, reading the very last element doesn't depend on the number of nodes that are present in the array. In other words, this operation takes constant time or `O(1)`.
+As you can see, the number of operations to read the very last element doesn't depend on the number of nodes that are present in the array. In other words, reading the data in the last element of an array takes linear time or `O(1)`.
 
 Now, you might be wondering in what situations would a program need to insert, and delete, data at the beginning of an ordered collection very quickly while still traversing through the list fairly quickly. Here are a few examples from the material world as well as the immaterial world of software.
 
