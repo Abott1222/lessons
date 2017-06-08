@@ -570,7 +570,7 @@ Because the `while` iterations and the `join` iterations are not nested, the tot
 
 ### Exercise
 
-In your `linkedList.js` file, add comments about the `constructor` and `toString` methods with their time and space complexities. For example:
+In your `linkedList.js` file, add comments about the time and space complexities of the `constructor` and `toString` methods. For example:
 
 ```javascript
 class LinkedList {
@@ -583,7 +583,7 @@ class LinkedList {
 }
 ```
 
-Then, analzyze time and space complexities of the `unshift` and `get` methods. When you've worked them out, add comments above the `unshift` and `get` methods with their respective complexities.
+Then, analyze the time and space complexities of the `unshift` and `get` methods. When you've worked them out, add comments above the `unshift` and `get` methods with their respective complexities.
 
 As a bonus, perform the same analysis on the `shift` method, if you have one.
 
